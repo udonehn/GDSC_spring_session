@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>age</title>
+</head>
+<body>
+당신의 한국식 나이는?
+<form action="/age/result" method="get">
+    <input name="age" type="number">
+    <br>
+    생일이 지났습니까?
+    <br>
+
+    <input type="radio" id="true" name="isBirthdayPassed" value="true">
+    <label for="true">예</label>
+
+    <input type="radio" id="false" name="isBirthdayPassed" value="false">
+    <label for="false">아니오</label>
+    <br>
+
+    <button type="submit">전송</button>
+</form>
+</body>
+</html>
