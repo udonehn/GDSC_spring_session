@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poll</title>
+</head>
+<body>
+<h1>당신이 가장 자신있는 언어는?</h1>
+
+<form action="/poll" method="post">
+  <input type="radio" id="c" name="language" value="c">
+  <label for="c">C언어</label>
+  <br>
+
+  <input type="radio" id="java" name="language" value="java">
+  <label for="java">Java</label>
+  <br>
+
+  <input type="radio" id="python" name="language" value="python">
+  <label for="python">Python</label>
+  <br>
+
+  <button type="submit">제출</button>
+  <br>
+  <a href="/poll/result">결과 보기</a>
+
+</form>
+</body>
+</html>
