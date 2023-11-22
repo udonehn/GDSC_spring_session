@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>게시판</title>
+</head>
+<body>
+
+<a href="/board/write">글 작성하기</a>
+
+<form action="/board" method="get">
+  <label><input type="radio" name="new_first" value="true">최근 글 먼저 보기</label>
+  <label><input type="radio" name="new_first" value="false">오래된 글 먼저 보기</label>
+  <button type="submit">적용</button>
+</form>
+
+<ul th:if="${not posts.empty}" th:each="post : ${posts}">
+  <li><a th:href="@{/board/post/{idx}(idx=${post.idx})}" th:text="${post.title}"></a></li>
+</ul>
+<p th:if="${posts.empty}">게시물이 없습니다.</p>
+
+</body>
+</html>

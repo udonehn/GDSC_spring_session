@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>게시글</title>
+</head>
+<body>
+
+<h1 th:text="${post.title}">제목</h1>
+<p th:text="${post.context}">내용</p>
+
+<form th:action="@{/board/post/{idx}(idx=${post.idx})}" method="post">
+  <input type="hidden" name="_method" value="delete"/>
+  <button type="submit">삭제하기</button>
+</form>
+
+</body>
+</html>
